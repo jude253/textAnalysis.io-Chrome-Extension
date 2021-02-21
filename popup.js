@@ -1,4 +1,17 @@
 $(function(){
+    //this function makes sure the previous analysis persists when the popup is reopened.
+    chrome.storage.sync.get(['analysis'],function(response){
+        //if there is stored analysis, put that in the popup
+        if (response.analysis) {
+            // turn the string back into JSON
+            updateInfo = JSON.parse(response.analysis);
+            // update the UI with the analysis
+            $('#gender').text('Gender: ' + updateInfo.predictions.gender.prediction);
+            $('#tone').text('Tone: ' + updateInfo.predictions.tone.prediction);
+            $('#age').text('Age: ' + updateInfo.predictions.age.prediction);
+        }
+    });
+    
     // this is the function that updates the popup UI
     chrome.runtime.onMessage.addListener(
       (request, sender, sendResponse) => {

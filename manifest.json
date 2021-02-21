@@ -1,27 +1,33 @@
 {
-  "name": "textAnalysis.io",
-  "description": "Analyze text using AI at the click of your mouse",
+  "name": "textalysis.io",
+  "description": "Analyze text using AI at the click of your mouse.  Works best at the paragraph level.",
   "version": "1.0",
   "manifest_version": 3,
   "background": {
     "service_worker": "background.js"
   },
   "permissions": ["storage", "activeTab", "scripting"],
-  "host_permissions": ["https://*/"],
+  "host_permissions": ["https://judecapachietti.com/api/*"],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
-      "16": "/images/get_started16.png",
-      "32": "/images/get_started32.png",
-      "48": "/images/get_started48.png",
-      "128": "/images/get_started128.png"
+        "16": "/images/favicon16.png",
+        "32": "/images/favicon32.png",
+        "48": "/images/favicon48.png",
+        "128": "/images/favicon180.png",
+        "180": "/images/favicon180.png",
+        "192": "/images/favicon192.png",
+        "512": "/images/favicon512.png"
     }
   },
   "icons": {
-    "16": "/images/get_started16.png",
-    "32": "/images/get_started32.png",
-    "48": "/images/get_started48.png",
-    "128": "/images/get_started128.png"
+      "16": "/images/favicon16.png",
+      "32": "/images/favicon32.png",
+      "48": "/images/favicon48.png",
+      "128": "/images/favicon180.png",
+      "180": "/images/favicon180.png",
+      "192": "/images/favicon192.png",
+      "512": "/images/favicon512.png"
   },
   "options_page": "options.html"
 }
